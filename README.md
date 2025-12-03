@@ -51,5 +51,4 @@ Assignment5/
 │   ├── http_service.py          
 │   ├── test_endpoints.py        
 │
-└── notebook/
-    ├── Assignment5.ipynb       
+└── Assignment5.ipynb       
