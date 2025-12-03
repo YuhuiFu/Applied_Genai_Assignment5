@@ -1,1 +1,1 @@
-from .mcp import CustomerDatabaseMCP
+# Makes mcp_server a Python package
