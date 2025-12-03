@@ -1,8 +1,10 @@
-# Applied_Genai_Assignment5
-# Multi-Agent Customer Service System with MCP
+**Assignment 5 — Multi-Agent Customer Service System
 
-This repository contains my solution for the **"Multi-Agent Customer Service System with A2A and MCP"** assignment.
+(A2A Coordination + MCP Integration + LangGraph)**
 
+This project implements a multi-agent customer-support system using LangGraph, Agent-to-Agent (A2A) communication, and the Model Context Protocol (MCP). The system consists of three cooperating agents — CoordinatorUnit, RecordsUnit, and AssistUnit — which together perform routing, database retrieval, negotiation, and ticket creation. All database operations are abstracted behind an MCP server exposing five standard tools.
+
+This repository includes the complete implementation, modularized into separate Python files to make the system easier to deploy, test, and demonstrate.
 It includes:
 
 1. **MCP server implementation**  
@@ -27,23 +29,27 @@ It includes:
 ## Repository Structure
 
 ```text
-.
+Assignment5/
+│
+├── README.md
+├── requirements.txt
+├── database_setup.py
+├── support.db         
+│
 ├── mcp_server/
 │   ├── __init__.py
-│   └── mcp.py
+│   ├── mcp_core.py              
+│
 ├── agents/
 │   ├── __init__.py
-│   ├── base.py
-│   ├── router_agent.py
-│   ├── customer_data_agent.py
-│   └── support_agent.py
-├── database/
+│   ├── coordinator.py          
+│   ├── records.py               
+│   ├── assist.py                
+│
+├── a2a_server/
 │   ├── __init__.py
-│   └── database_setup.py
-├── scripts/
-│   ├── setup_venv.sh
-│   ├── run_demo.sh
-│   └── reset_db.sh
-├── multi_agent_system.py
-├── requirements.txt
-└── README.md
+│   ├── http_service.py          
+│   ├── test_endpoints.py        
+│
+└── notebook/
+    ├── Assignment5.ipynb       
